@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B19C892E-2628-4CA7-AD27-08D406A3B14B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Calculator.UITest</RootNamespace>
+    <AssemblyName>Calculator.UITest</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NUnit" Version="3.10.1" />
+    <PackageReference Include="Xamarin.UITest" Version="2.2.5" />
+    <PackageReference Include="NUnitTestAdapter" Version="2.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Tests.cs" />
+    <Compile Include="AppInitializer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CalculatorApp\CalculatorApp.Android\CalculatorApp.Android.csproj">
+      <Project>{ca02ac5b-6f34-4a1d-b138-2bc2f623702c}</Project>
+      <Name>CalculatorApp.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CalculatorApp\CalculatorApp\CalculatorApp.csproj">
+      <Project>{5726fd93-4850-45ce-8205-f3d3f224e788}</Project>
+      <Name>CalculatorApp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

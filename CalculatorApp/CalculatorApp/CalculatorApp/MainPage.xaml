@@ -4,7 +4,6 @@
              xmlns:local="clr-namespace:CalculatorApp"
              x:Class="CalculatorApp.MainPage"
              Title="Week8 Testing">
-
     <StackLayout Orientation="Vertical">
         <Entry x:Name="txtX" AutomationId="value1"/>
         <Entry x:Name="txtY" AutomationId="value2"/>
@@ -14,5 +13,4 @@
         <Button Text="/" x:Name="btnDivide" Clicked="ButtonClicked" AutomationId="btnDivide"/>
         <Label x:Name="lblResult" AutomationId="vaule3"/>
     </StackLayout>
-
 </ContentPage>

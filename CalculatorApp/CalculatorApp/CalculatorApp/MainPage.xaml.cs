@@ -30,9 +30,6 @@ namespace CalculatorApp
                 case "/":
                     lblResult.Text = (double.Parse(txtX.Text) / double.Parse(txtY.Text)).ToString();
                     break;
-
-                  
-
             }
         }
     }
